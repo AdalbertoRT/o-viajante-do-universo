@@ -1,0 +1,141 @@
+@font-face {
+  font-family: Lobster;
+  src: url("../fonts/Lobster.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-family: Lobster, serif;
+  display: block;
+  position: absolute;
+  right: 5%;
+  text-decoration: none;
+  color: #fff;
+  max-width: 200px;
+  opacity: 0;
+  animation: texts 4s ease forwards;
+}
+
+a.link-1 {
+  top: 10%;
+}
+
+a.link-2 {
+  top: 20%;
+}
+
+a.link-1,
+a.link-2 {
+  transition: all 0.3s linear;
+}
+
+a.link-1:hover,
+a.link-2:hover {
+  font-size: 2rem;
+}
+
+p {
+  font-family: Lobster, serif;
+  max-width: 300px;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  opacity: 0;
+  animation: texts 4s ease forwards;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.planet {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: calc(100vw - 200px - 50%);
+  top: calc(100vh - 150px - 50%);
+  animation: planet 2s ease;
+}
+
+.person,
+.airplane,
+.seated,
+.fox {
+  z-index: 2;
+  opacity: 0;
+  animation: showPerson 2s ease forwards;
+}
+
+.person {
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+}
+
+.airplane {
+  width: 600px;
+  height: 500px;
+  position: absolute;
+  top: calc(40% - 200px);
+  left: calc(50% - 200px);
+}
+
+.seated {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: calc(50% - 220px);
+  left: calc(50% - 100px);
+}
+
+.fox {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 150px);
+}
+
+@keyframes showPerson {
+  from {
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes planet {
+  from {
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes texts {
+  from {
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
