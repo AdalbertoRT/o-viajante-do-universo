@@ -16,7 +16,7 @@ a {
   right: 5%;
   text-decoration: none;
   color: #fff;
-  max-width: 200px;
+  max-width: 250px;
   opacity: 0;
   animation: texts 4s ease forwards;
 }
@@ -31,12 +31,16 @@ a.link-2 {
 
 a.link-1,
 a.link-2 {
+  font-size: 1.5rem;
+  opacity: 0;
+  animation: texts 4s 4s ease forwards;
   transition: all 0.3s linear;
 }
 
 a.link-1:hover,
 a.link-2:hover {
   font-size: 2rem;
+  color: gold;
 }
 
 p {
@@ -47,7 +51,7 @@ p {
   left: 5%;
   top: 10%;
   opacity: 0;
-  animation: texts 4s ease forwards;
+  animation: texts 4s 4s ease forwards;
 }
 
 body {
@@ -67,24 +71,21 @@ body {
   position: absolute;
   left: calc(100vw - 200px - 50%);
   top: calc(100vh - 150px - 50%);
-  animation: planet 2s ease;
+  opacity: 0;
+  animation: planet 4s ease forwards;
 }
 
+.player,
 .person,
-.airplane,
 .seated,
 .fox {
   z-index: 2;
   opacity: 0;
-  animation: showPerson 2s ease forwards;
+  animation: showPerson 2s 2.8s ease forwards;
 }
 
-.person {
-  width: 300px;
-  height: 250px;
-  position: absolute;
-  top: calc(50% - 200px);
-  left: calc(50% - 200px);
+.page6 {
+  animation: showPerson 2s ease forwards !important;
 }
 
 .airplane {
@@ -111,6 +112,73 @@ body {
   left: calc(50% - 150px);
 }
 
+.player {
+  width: 400px;
+  height: 350px;
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+}
+
+.person {
+  width: 300px;
+  height: 250px;
+  position: relative;
+  top: calc(50% - 250px);
+  left: calc(50% - 200px);
+}
+
+.flying {
+  width: 450px;
+  height: 400px;
+  animation: fly 3s linear;
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+}
+
+.talkbubble {
+  width: 250px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.8);
+  position: relative;
+  left: 60%;
+  top: 40%;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.talkbubble:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  bottom: 50px;
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-right: 50px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 50px solid transparent;
+}
+
+.talkbubble.page5 {
+  left: -20%;
+  top: -20%;
+  transform: rotate(180deg);
+}
+
+.talkbubble.page6 {
+  left: 120%;
+  top: 20%;
+  transform: rotateX(180deg) !important;
+}
+
+.talkbubble.page7 {
+  left: -50%;
+  top: 50%;
+  transform: rotateY(180deg);
+}
+
 @keyframes showPerson {
   from {
     transform: translate3d(0, -30px, 0);
@@ -123,9 +191,10 @@ body {
 
 @keyframes planet {
   from {
-    transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 100px, 0);
   }
   to {
+    opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }
@@ -137,5 +206,25 @@ body {
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fly {
+  from {
+    width: 200px;
+    height: 150px;
+    opacity: 1;
+    transform: translate3d(-200px, -100px, 0);
+  }
+  to {
+    width: 450px;
+    height: 400px;
+    transform: translate3d(40vw, 0, 0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
