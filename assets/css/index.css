@@ -24,12 +24,14 @@
   letter-spacing: 5px;
   font-size: 4rem;
   padding: 10px;
+  text-shadow: 0 5px 10px gold;
 }
 
 #index section h2 {
   font-size: 2rem;
   padding: 10px;
   margin-bottom: 50px;
+  text-shadow: 0 2px 5px #000;
 }
 
 #index section a {
@@ -39,12 +41,13 @@
   font-size: 3rem;
   font-weight: bold;
   padding: 10px;
+  text-align: center;
   border-radius: 10px;
   transition: all 0.3s;
   position: relative;
   margin: auto;
   left: 0;
-  top: 50%;
+  top: 30%;
 }
 
 #index section a:hover {

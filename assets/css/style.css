@@ -16,31 +16,45 @@ a {
   right: 5%;
   text-decoration: none;
   color: #fff;
-  max-width: 250px;
+  max-width: 300px;
   opacity: 0;
   animation: texts 4s ease forwards;
+  text-align: right;
 }
 
 a.link-1 {
   top: 10%;
+  animation: links 1s 5s ease-out forwards;
 }
 
 a.link-2 {
-  top: 20%;
+  top: 30%;
+  animation: links 1s 5.5s ease-out forwards;
 }
 
 a.link-1,
 a.link-2 {
   font-size: 1.5rem;
-  opacity: 0;
-  animation: texts 4s 4s ease forwards;
   transition: all 0.3s linear;
 }
 
-a.link-1:hover,
-a.link-2:hover {
+a.back {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
   font-size: 2rem;
+}
+
+a.link-1:hover,
+a.link-2:hover,
+a.back:hover {
+  font-weight: bolder;
+  text-shadow: 0 0 20px gold;
   color: gold;
+  transition: all 0.3s ease;
 }
 
 p {
@@ -51,7 +65,7 @@ p {
   left: 5%;
   top: 10%;
   opacity: 0;
-  animation: texts 4s 4s ease forwards;
+  animation: texts 4s 3s ease forwards;
 }
 
 body {
@@ -63,6 +77,7 @@ body {
   background-position: center;
   padding: 20px;
   color: #fff;
+  overflow: hidden;
 }
 
 .planet {
@@ -71,7 +86,6 @@ body {
   position: absolute;
   left: calc(100vw - 200px - 50%);
   top: calc(100vh - 150px - 50%);
-  opacity: 0;
   animation: planet 4s ease forwards;
 }
 
@@ -128,6 +142,11 @@ body {
   left: calc(50% - 200px);
 }
 
+.person.shower {
+  top: calc(0% - 300px);
+  left: calc(50% - 130px);
+}
+
 .flying {
   width: 450px;
   height: 400px;
@@ -144,11 +163,13 @@ body {
   position: relative;
   left: 60%;
   top: 40%;
+  padding: 10px 10px 10px 20px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 50px;
   border-bottom-left-radius: 50px;
 }
+
 .talkbubble:before {
   content: "";
   position: absolute;
@@ -159,6 +180,36 @@ body {
   border-top: 0px solid transparent;
   border-right: 50px solid rgba(255, 255, 255, 0.8);
   border-bottom: 50px solid transparent;
+}
+
+.talkbubble p {
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  font-size: 1em;
+  color: #000;
+  animation: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.talkbubble.pageShower {
+  left: -30%;
+  top: 0%;
+}
+
+.talkbubble.pageMars2 {
+  left: -25%;
+  top: 30%;
+}
+
+.talkbubble.pageShower:before,
+.talkbubble.pageMars2:before {
+  left: 100%;
+  transform: rotateY(180deg);
 }
 
 .talkbubble.page5 {
@@ -194,7 +245,6 @@ body {
     transform: translate3d(0, 100px, 0);
   }
   to {
-    opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }
@@ -209,17 +259,31 @@ body {
   }
 }
 
+@keyframes links {
+  0% {
+    right: -5%;
+  }
+  90% {
+    opacity: 0.75;
+    right: 10%;
+  }
+  100% {
+    opacity: 1;
+    right: 5%;
+  }
+}
+
 @keyframes fly {
   from {
-    width: 200px;
-    height: 150px;
-    opacity: 1;
-    transform: translate3d(-200px, -100px, 0);
+    width: 20px;
+    height: 15px;
+    opacity: 0.5;
+    transform: translate3d(-20px, -100px, 0);
   }
   to {
     width: 450px;
     height: 400px;
-    transform: translate3d(40vw, 0, 0);
+    transform: translate3d(40vw, 0, 200px);
   }
   90% {
     opacity: 1;
