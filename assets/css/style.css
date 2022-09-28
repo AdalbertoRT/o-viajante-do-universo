@@ -119,10 +119,10 @@ body {
 }
 
 .seated {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   position: absolute;
-  top: calc(50% - 220px);
+  top: calc(50% - 150px);
   left: calc(50% - 100px);
 }
 
