@@ -89,6 +89,14 @@ body {
   animation: planet 4s ease forwards;
 }
 
+.earthInTheBackground {
+  position: absolute;
+  right: -150px;
+  top: -150px;
+  width: 300px;
+  z-index: -1;
+}
+
 .player,
 .person,
 .seated,
@@ -168,6 +176,7 @@ body {
   -webkit-border-radius: 10px;
   border-radius: 50px;
   border-bottom-left-radius: 50px;
+  z-index: 20;
 }
 
 .talkbubble:before {
@@ -201,13 +210,13 @@ body {
   top: 0%;
 }
 
-.talkbubble.pageMars2 {
+.talkbubble.seated {
   left: -25%;
   top: 30%;
 }
 
 .talkbubble.pageShower:before,
-.talkbubble.pageMars2:before {
+.talkbubble.seated:before {
   left: 100%;
   transform: rotateY(180deg);
 }
