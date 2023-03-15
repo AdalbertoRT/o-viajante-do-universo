@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css " />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <title>O Pequeno Príncipe - O Viajante do Universo</title>
+  </head>
+  <body id="index">
+<<<<<<< HEAD
+    <header>
+      <div id="cumprimento"></div>
+      <div id="data"></div>
+      <div id="hora"></div>
+    </header>
+    <audio
+      id="intro"
+      controls
+      preload="auto"
+      loop="loop"
+      autoplay="autoplay"
+      src="assets/sounds/The Little Prince INSTRUMENTAL (128 kbps).mp3"
+      type="audio/mp3"
+    >
+      <!-- <source src="assets/sounds/The Little Prince INSTRUMENTAL (128 kbps).mp3" type="audio/mpeg" />
+       Your browser does not support the audio element. -->
+=======
+    <audio
+      controls
+      autoplay
+      src="assets/sounds/The Little Prince INSTRUMENTAL (128 kbps).mp3"
+    >
+      <source
+        src="assets/sounds/The Little Prince INSTRUMENTAL (128 kbps).mp3"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+>>>>>>> f1ed54ab1a4bd9741707b35ef150d7a2061edea5
+    </audio>
+    <section>
+      <h1>O Pequeno Príncipe</h1>
+      <h2>O Viajante do Universo</h2>
+      <a href="pageAsteroid.html" id="btn-play">JOGAR</a>
+    </section>
+  </body>
+
+  <script>
+    const zeroFill = (n) => {
+      return ("0" + n).slice(-2);
+    };
+
+    const interval = setInterval(() => {
+      const now = new Date();
+      const data = zeroFill(now.getUTCDate()) + "/" + zeroFill(now.getMonth() + 1) + "/" + now.getFullYear();
+      const hora = zeroFill(now.getHours()) + ":" + zeroFill(now.getMinutes()) + ":" + zeroFill(now.getSeconds());
+      if (now.getHours() < 12) {
+        document.getElementById("cumprimento").innerHTML = "Bom dia!";
+      } else if (now.getHours() < 18) {
+        document.getElementById("cumprimento").innerHTML = "Boa tarde!";
+      } else {
+        document.getElementById("cumprimento").innerHTML = "Boa noite!";
+      }
+      document.getElementById("data").innerHTML = data;
+      document.getElementById("hora").innerHTML = hora;
+    }, 1000);
+  </script>
+</html>

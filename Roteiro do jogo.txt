@@ -1,0 +1,54 @@
+INICIO (index)
+(Texto introdutivo)
+
+Olá jogador você já me conhece? Sou o Pequeno Príncipe um viajante do Universo em busca de amizades
+e conhecimento deste vasto e imenso campo galático. Esta pronto para jogar? Qual é a nossa primeira
+missão espacial?
+
+(link-1) Texto
+1 - Quer me mostrar este Planeta que estamos?
+
+(link-2) Texto
+2 - Quer conhecer outro Planeta?
+
+// Após selecionar o link //
+
+
+
+PAGINA 1
+(Texto introdutivo) 
+
+
+(link-3) Texto
+Eu acabei de chegar a este planeta, se chama Terra mesmo? Poderia me mostrar sua vida nele?
+
+(link-4) Texto
+Conheço vários outros planetas e posso te mostrar alguns! O que acha de conhecer Marte? e Depois a Lua?
+
+// Após selecionar o link //
+
+
+
+PAGINA 2
+(Texto introdutivo) 
+
+
+(link-5) Texto
+Uau como a vida aqui é cheio de pessoas, animais! Voce ja viu uma raposa? Gostaria de ver uma!
+
+(link-3) Texto
+Demorou um pouco a viagem mas aqui estamos em Marte! Mas como pode ver é bem vermelho e tem poucas coisas.
+Mas a Lua é cheia de misterios, vamos?
+
+
+// Após selecionar o link //
+
+PAGINA 3
+(Texto introdutivo) 
+
+
+(link-5) Texto
+São lindas, será que posso levar uma para o meu planeta?
+
+(link-3) Texto
+A Lua tem mais brilho, e uma parte escura. Cheia de mistérios mas isso fica para um outro dia! 
