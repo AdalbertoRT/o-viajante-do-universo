@@ -9,7 +9,9 @@
   box-sizing: border-box;
 }
 
-body {padding: 0;}
+body {
+  padding: 0;
+}
 
 a {
   font-family: Lobster, serif;
@@ -82,39 +84,6 @@ body {
   overflow: hidden;
 }
 
-<<<<<<< HEAD
-=======
-.planet {
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  left: calc(100vw - 200px - 50%);
-  top: calc(100vh - 150px - 50%);
-  animation: planet 4s ease forwards;
-}
-
-.earthInTheBackground {
-  position: absolute;
-  right: -150px;
-  top: -150px;
-  width: 300px;
-  z-index: -1;
-}
-
-.player,
-.person,
-.seated,
-.fox {
-  z-index: 2;
-  opacity: 0;
-  animation: showPerson 2s 2.8s ease forwards;
-}
-
-.page6 {
-  animation: showPerson 2s ease forwards !important;
-}
-
->>>>>>> f1ed54ab1a4bd9741707b35ef150d7a2061edea5
 .airplane {
   width: 600px;
   height: 500px;
@@ -123,8 +92,11 @@ body {
   left: calc(50% - 200px);
 }
 
-<<<<<<< HEAD
-#continua {position: absolute; top: 80%; left:80%}
+#continua {
+  position: absolute;
+  top: 80%;
+  left: 80%;
+}
 
 .flying {
   width: 450px;
@@ -133,14 +105,6 @@ body {
   position: absolute;
   z-index: 10;
   opacity: 0;
-=======
-.seated {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  top: calc(50% - 150px);
-  left: calc(50% - 100px);
->>>>>>> f1ed54ab1a4bd9741707b35ef150d7a2061edea5
 }
 
 .fox {
@@ -149,11 +113,15 @@ body {
   position: absolute;
   top: 50%;
   left: calc(50% - 150px);
-  z-index:-1;
+  z-index: -1;
 }
 
-#linksFootprint a.link-1 { top:60%}
-#linksFootprint a.link-2 { top:80%}
+#linksFootprint a.link-1 {
+  top: 60%;
+}
+#linksFootprint a.link-2 {
+  top: 80%;
+}
 
 .planet {
   width: 400px;
@@ -164,11 +132,14 @@ body {
   animation: planet 4s ease forwards;
 }
 
-.planet#terra { width: 600px;
-  height: 600px;left: calc(100vw - 300px - 50%);
-  top: calc(100vh - 300px - 50%);}
+.planet#terra {
+  width: 600px;
+  height: 600px;
+  left: calc(100vw - 300px - 50%);
+  top: calc(100vh - 300px - 50%);
+}
 
-.player{
+.player {
   z-index: 2;
   opacity: 0;
   animation: showPerson 2s 2.8s ease forwards;
@@ -179,11 +150,19 @@ body {
   left: calc(50% - 200px);
 }
 
-.playerOnEarth .person { left: calc(50% - 100px);}
+.playerOnEarth .person {
+  left: calc(50% - 100px);
+}
 
-.playerOnEarth .fox { top: calc(10% - 100px);}
-.playerOnEarth .airplanebubble { position: absolute;top: calc(10% - 100px); left: 90%; width: 300px;}
-
+.playerOnEarth .fox {
+  top: calc(10% - 100px);
+}
+.playerOnEarth .airplanebubble {
+  position: absolute;
+  top: calc(10% - 100px);
+  left: 90%;
+  width: 300px;
+}
 
 .person {
   width: 300px;
@@ -203,7 +182,6 @@ body {
   z-index: -1;
 }
 
-
 .planet-distance {
   position: relative;
   width: 50vw;
@@ -212,8 +190,11 @@ body {
   z-index: -1;
 }
 
-.planet-distance#moon { width: 100px;  left: 10%;
-  top: -5%;}
+.planet-distance#moon {
+  width: 100px;
+  left: 10%;
+  top: -5%;
+}
 
 .seated {
   width: 250px;
@@ -298,11 +279,22 @@ body {
   transform: rotateY(180deg);
 }
 
-#theEnd {width: 100%; height: 100%; background-image: url("../images/the-end.png"); background-repeat: no-repeat; background-size: 100% 100%;}
+#theEnd {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/the-end.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 
-#theEnd p {font-size: 3rem; text-shadow: 2px 2px #000;}
+#theEnd p {
+  font-size: 3rem;
+  text-shadow: 2px 2px #000;
+}
 
-.vsc-initialized {padding:0}
+.vsc-initialized {
+  padding: 0;
+}
 
 @keyframes showPerson {
   from {
